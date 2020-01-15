@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS XO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body class="text-center">
+    <div class="container" style="padding: 10%">
+        <div class="container">
+            <p style="font-family: Consolas,monospace">X: <span id="player_1">P1</span>    |    O: <span id="player_2">P2</span></p>
+        </div>
+        <p id="current_mark">X</p>
+        <div class="container">
+        <h1>XO</h1>
+            <div class="container">
+                <!-- row 1 -->
+                <div class="row" id="row_1">
+                    <div class="col border-bottom border-right">
+                    <input type="checkbox" name="1" id="1" onchange="PlaceMark(1); listenAll();">
+                    <p id="cell_1"></p>
+                    </div>
+                    <div class="col border-bottom border-bottom">
+                    <input type="checkbox" name="2" id="2" onchange="PlaceMark(2); listenAll();">
+                    <p id="cell_2"></p>
+                    </div>
+                    <div class="col border-bottom border-left">
+                    <input type="checkbox" name="3" id="3" onchange="PlaceMark(3); listenAll();">
+                    <p id="cell_3"></p>
+                    </div>
+                </div>
+                <!-- row 2 -->
+                <div class="row" id="row_2">
+                    <div class="col border-bottom border-right">
+                    <input type="checkbox" name="4" id="4" onchange="PlaceMark(4); listenAll();">
+                    <p id="cell_4"></p>
+                    </div>
+                    <div class="col border-bottom border-bottom">
+                    <input type="checkbox" name="5" id="5" onchange="PlaceMark(5); listenAll();">
+                    <p id="cell_5"></p>
+                    </div>
+                    <div class="col border-bottom border-left">
+                    <input type="checkbox" name="6" id="6" onchange="PlaceMark(6); listenAll();">
+                    <p id="cell_6"></p>
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="row" id="row_3">
+                    <div class="col border-bottom border-right">
+                    <input type="checkbox" name="7" id="7" onchange="PlaceMark(7); listenAll();">
+                    <p id="cell_7"></p>
+                    </div>
+                    <div class="col border-bottom border-bottom">
+                    <input type="checkbox" name="8" id="8" onchange="PlaceMark(8); listenAll();">
+                    <p id="cell_8"></p>
+                    </div>
+                    <div class="col border-bottom border-left">
+                    <p id="cell_9"></p>
+                    <input type="checkbox" name="9" id="9" onchange="PlaceMark(9); listenAll();">
+                    </div>
+                </div>
+                <!-- result board -->
+                <br>
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <p id="result">
+                        <strong>Alireza!</strong> You Win.
+                    </p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="listen.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
